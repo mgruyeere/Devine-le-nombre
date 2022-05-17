@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devine le nombre !</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="shortcut icon" href="./logo.jpg"/>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Devine le nombre !</h1>
+        <p>Trouve le bon nombre entre 0 et 100. Tu as 6 vies !</p>
+        
+        <div class="vies"> 
+            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon name="heart"></ion-icon>
+
+        </div>
+
+        <form id="inputBox">
+            <label for="number">Entrer un nombre : </label>
+            <input type="number" id="number" min="0" max="100" required>
+            <button type="submit" id="essaiBtn">Envoyer</button>
+            <p id="message"></p>
+            <button id="rejouer">Rejouer ?</button>
+        </form>
+
+        <p id="detail">* Brûlant = &plusmn; 2; Chaud = &plusmn; 5; Tiède = &plusmn; 10; Froid = + de 10.</p>
+
+        </div>
+
+    <script src="./script.js"></script>
+
+    <!--Script pour les icônes-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>

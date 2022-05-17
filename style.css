@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap');
+
+/*définition des variables pour les répétitions de propriétés - :root c'est la racine du code, les noms de variables sont précédés par -- */
+:root{
+    --title:#f8c27a;
+    --textShadow: 0 2px 2px rgba(0,0,0,.7);
+    --boxShadow: 0 0px 10px rgba(0,0,0,.2);
+}
+
+/*On réinitialise la page = reset*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size : 20px;
+    width: 100vw; /*100% de la largeur de la page*/
+    overflow: hidden; /*l'élement ne tient que sur une page, pas de pbl de scroll*/
+    height: 100vh; /*100% de la hauteur de la page*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%); 
+}
+
+h1{
+    font-family: 'Gluten', cursive;
+    margin-bottom: 15px;
+    color: #a470c5;
+    text-shadow: var(--textShadow);
+    display: inline-block; /*Le titre ne l'étalera pas sur toute la largeur du container*/
+}
+
+.container{
+    background-color: rgba(255, 255, 255,0.2);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: var(--boxShadow);
+}
+
+.vies{
+    margin: 10px;
+}
+
+ion-icon{
+    font-size: 50px;
+    fill:red;
+}
+
+#inputBox{
+    background-color: #b490ca;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#inputBox > label {
+    display: block; /* prend toute la largeur possible et renvoi le reste en dessous */
+    margin-bottom: 8px;
+}
+
+input, button{
+    outline: none; 
+    border: none;
+    padding: 3px 20px;
+    border-radius: 5px;
+}
+
+button{
+    background-color: #5ee7df;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s; /*au passage de la souris sur le bouton, rendu plus naturel -> lien avec transform */
+    font-family: sans-serif;
+}
+
+button:hover{
+    transform: translateY(-2px); /*le bouton va "monter" de 2px lors du passage de la souris (avec 0.2 de délai) */
+    background-color: #92faf3;
+}
+
+#message{
+    margin: 20px auto 0 auto;
+}
+
+#rejouer{
+    display: none; /*n'apparait pas tant qu'il y a des vies */
+    margin: 5px auto 0 auto;
+}
+
+#detail{
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+}
